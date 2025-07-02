@@ -10,6 +10,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import Experience from "./pages/Experience";
+import Certifications from "./pages/Certifications";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/certifications" element={<Certifications />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -6,6 +6,16 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 
 const Index = () => {
+  const handleDownloadResume = () => {
+    // Convert Google Drive view link to direct download link
+    const driveUrl = 'https://drive.google.com/file/d/1xAgkcU4-_sbZh1wpZLMw-bjOv4-dEnCI/view?usp=sharing';
+    const fileId = driveUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
+    if (fileId) {
+      const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+      window.open(downloadUrl, '_blank');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Navigation />
@@ -43,6 +53,7 @@ const Index = () => {
               </Button>
               
               <Button 
+                onClick={handleDownloadResume}
                 variant="outline" 
                 className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >

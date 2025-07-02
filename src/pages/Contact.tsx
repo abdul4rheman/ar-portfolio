@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
-import { Phone, Mail, Linkedin, Github, Send, MapPin } from 'lucide-react';
+import { Phone, Mail, Linkedin, Github, Send, MapPin, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 
@@ -12,6 +12,64 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Service inquiry modal state
+  const [isServiceModalOpen, setIsServiceModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState('');
+  const [serviceFormData, setServiceFormData] = useState({
+    name: '',
+    mobile: '',
+    email: ''
+  });
+
+  const openServiceModal = (serviceName: string) => {
+    setSelectedService(serviceName);
+    setIsServiceModalOpen(true);
+  };
+
+  const handleServiceSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mdkzjove', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: serviceFormData.name,
+          email: serviceFormData.email,
+          mobile: serviceFormData.mobile,
+          service: selectedService,
+          message: `Service Inquiry for: ${selectedService}`,
+          _replyto: serviceFormData.email,
+          _subject: `Service Inquiry: ${selectedService}`,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Service Inquiry Sent!',
+          description: 'Thank you for your interest. I\'ll get back to you within 24 hours.',
+        });
+        setServiceFormData({ name: '', mobile: '', email: '' });
+        setIsServiceModalOpen(false);
+      } else {
+        throw new Error('Failed to send inquiry');
+      }
+    } catch (error) {
+      console.error('Error sending inquiry:', error);
+      toast({
+        title: 'Failed to Send Inquiry',
+        description: 'There was an error sending your inquiry. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -235,10 +293,14 @@ const Contact = () => {
               I'm here to help bring your ideas to life.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+              <Button 
+                onClick={() => window.open('https://wa.me/918055670208?text=Hi%20Abdul%20Rheman,%20I%20would%20like%20to%20start%20a%20project%20with%20you.', '_blank')}
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+              >
                 Start a Project
               </Button>
               <Button 
+                onClick={() => window.location.href = '/projects'}
                 variant="outline"
                 className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >
@@ -248,8 +310,93 @@ const Contact = () => {
           </div>
         </div>
       </main>
+
+      {/* Service Inquiry Modal */}
+      {isServiceModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-bold text-white">Service Inquiry</h3>
+              <button
+                onClick={() => setIsServiceModalOpen(false)}
+                className="text-gray-400 hover:text-white"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            
+            <p className="text-gray-300 mb-4">
+              Interested in: <span className="text-cyan-400 font-semibold">{selectedService}</span>
+            </p>
+            
+            <form onSubmit={handleServiceSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  value={serviceFormData.name}
+                  onChange={(e) => setServiceFormData({...serviceFormData, name: e.target.value})}
+                  required
+                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Mobile Number
+                </label>
+                <input
+                  type="tel"
+                  value={serviceFormData.mobile}
+                  onChange={(e) => setServiceFormData({...serviceFormData, mobile: e.target.value})}
+                  required
+                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  value={serviceFormData.email}
+                  onChange={(e) => setServiceFormData({...serviceFormData, email: e.target.value})}
+                  required
+                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                />
+              </div>
+              
+              <div className="flex gap-3 pt-4">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setIsServiceModalOpen(false)}
+                  className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-700"
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
+};
+
+// Make openServiceModal available globally
+window.openServiceModal = (serviceName: string) => {
+  // This will be handled by the updated Services page
 };
 
 export default Contact;

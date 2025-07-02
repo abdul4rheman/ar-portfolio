@@ -1,7 +1,6 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
-import { Briefcase, Calendar, MapPin, CheckCircle } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle, Award, Users, Trophy } from 'lucide-react';
 
 const Experience = () => {
   const experience = {
@@ -9,7 +8,7 @@ const Experience = () => {
     company: 'Inditronics',
     duration: 'June 25, 2024 – December 25, 2024',
     location: 'Remote/Hybrid',
-    status: 'Current',
+    status: 'Completed',
     description: 'Hands-on work with real datasets, reporting insights, and creating dashboards to support decision-making processes.',
     responsibilities: [
       'Analyzed complex datasets to extract actionable business insights',
@@ -30,31 +29,34 @@ const Experience = () => {
     skills: ['Python', 'Power BI', 'SQL', 'Excel', 'Statistical Analysis', 'Data Visualization']
   };
 
-  const timeline = [
+  const academicAchievements = [
     {
-      date: 'June 2024',
-      title: 'Started Internship',
-      description: 'Began internship at Inditronics as Data Analyst'
+      icon: <Users className="h-8 w-8" />,
+      title: 'Class Representative (1st to 3rd Year)',
+      period: '2021',
+      description: 'Represented a cohort of 60+ students for 3 consecutive years, facilitating communication between faculty and students, organizing academic events, and resolving student concerns.',
+      impact: 'Enhanced student-faculty communication'
     },
     {
-      date: 'July 2024',
-      title: 'First Dashboard',
-      description: 'Created first interactive Power BI dashboard'
+      icon: <Trophy className="h-8 w-8" />,
+      title: 'General Secretary – Annual College Gathering',
+      period: '2025',
+      description: 'Led the planning and execution of college-wide events, including sports, indoor games, and a cultural night, resulting in a 30% increase in student engagement compared to the previous year.',
+      impact: '30% increase in student engagement'
     },
     {
-      date: 'September 2024',
-      title: 'Process Automation',
-      description: 'Implemented Python scripts for data automation'
+      icon: <Award className="h-8 w-8" />,
+      title: 'Cultural Secretary',
+      period: '2023 & 2024',
+      description: 'Managed logistics, coordinated with 10+ teams, and oversaw event flow for two successful Annual Gatherings, ensuring 100% event delivery within planned timelines.',
+      impact: '100% event delivery success rate'
     },
     {
-      date: 'November 2024',
-      title: 'Stakeholder Presentation',
-      description: 'Presented insights to senior management'
-    },
-    {
-      date: 'December 2024',
-      title: 'Internship Completion',
-      description: 'Successfully completed 6-month internship'
+      icon: <Users className="h-8 w-8" />,
+      title: 'College Student Council Member',
+      period: 'Ongoing',
+      description: 'Supported peers with resume building, mock interviews, and pre-placement training initiatives; contributed to increasing placement participation by 20% in the department.',
+      impact: '20% increase in placement participation'
     }
   ];
 
@@ -144,27 +146,33 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Timeline */}
-          <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-cyan-400 mb-8 text-center">Internship Timeline</h2>
-            <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-cyan-400"></div>
-              <div className="space-y-6">
-                {timeline.map((item, index) => (
-                  <div key={index} className="relative flex items-start">
-                    <div className="absolute left-0 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
-                      <div className="w-3 h-3 bg-white rounded-full"></div>
+          {/* Academic Achievements */}
+          <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 mb-12">
+            <h2 className="text-2xl font-bold text-cyan-400 mb-8 text-center">Academic Achievements</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {academicAchievements.map((achievement, index) => (
+                <div key={index} className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center text-cyan-400 flex-shrink-0">
+                      {achievement.icon}
                     </div>
-                    <div className="ml-12">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <span className="text-cyan-400 text-sm font-medium">{item.date}</span>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-lg font-bold text-white">{achievement.title}</h3>
+                        <span className="text-cyan-400 text-sm font-medium">{achievement.period}</span>
                       </div>
-                      <p className="text-gray-400">{item.description}</p>
+                      <p className="text-gray-300 text-sm mb-3 leading-relaxed">
+                        {achievement.description}
+                      </p>
+                      <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-lg p-2">
+                        <p className="text-cyan-400 text-xs font-medium">
+                          Impact: {achievement.impact}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -172,7 +180,7 @@ const Experience = () => {
           <div className="mt-12 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Looking Forward</h2>
             <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Building on this internship experience, I'm excited to take on new challenges in data analysis 
+              Building on this internship experience and academic achievements, I'm excited to take on new challenges in data analysis 
               and continue growing my expertise in turning complex data into actionable business insights. 
               I'm actively seeking full-time opportunities where I can contribute to data-driven decision making 
               and organizational growth.
