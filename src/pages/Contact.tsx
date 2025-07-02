@@ -307,7 +307,7 @@ const Contact = () => {
                 Start a Project
               </Button>
               <Button 
-                onClick={() => window.location.href = '/projects'}
+                onClick={() => window.location.href = 'https://www.abdul4rheman.me/projects'}
                 variant="outline"
                 className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >
