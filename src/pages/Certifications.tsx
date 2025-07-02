@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import { ExternalLink, Award, Calendar, Building } from 'lucide-react';
@@ -44,13 +43,6 @@ const Certifications = () => {
     }
   ];
 
-  const categories = ['All', 'AI & Machine Learning', 'Programming', 'Development Tools', 'Data Analysis'];
-  const [activeCategory, setActiveCategory] = React.useState('All');
-
-  const filteredCertifications = activeCategory === 'All' 
-    ? certifications 
-    : certifications.filter(cert => cert.category === activeCategory);
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Navigation />
@@ -65,28 +57,9 @@ const Certifications = () => {
             <p className="text-xl text-gray-400">Professional certifications and continuous learning</p>
           </div>
 
-          {/* Category Filter */}
-          <div className="flex justify-center mb-12">
-            <div className="flex flex-wrap gap-4 bg-gray-800 p-2 rounded-lg">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
-                    activeCategory === category
-                      ? 'bg-cyan-500 text-white'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {/* Certifications Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            {filteredCertifications.map((cert, index) => (
+            {certifications.map((cert, index) => (
               <div 
                 key={index} 
                 className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group"

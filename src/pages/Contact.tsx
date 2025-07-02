@@ -4,6 +4,13 @@ import { Phone, Mail, Linkedin, Github, Send, MapPin, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 
+declare global {
+  interface Window {
+    openServiceModal: (serviceName: string) => void;
+  }
+}
+
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -395,7 +402,7 @@ const Contact = () => {
 };
 
 // Make openServiceModal available globally
-window.openServiceModal = (serviceName: string) => {
+window.openServiceModal = (serviceName) => {
   // This will be handled by the updated Services page
 };
 
