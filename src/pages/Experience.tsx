@@ -48,13 +48,13 @@ const Experience = () => {
       icon: <Award className="h-8 w-8" />,
       title: 'Cultural Secretary',
       period: '2023 & 2024',
-      description: 'Managed logistics, coordinated with 10+ teams, and oversaw event flow for two successful Annual Gatherings, ensuring 100% event delivery within planned timelines.',
+      description: 'Managed logistics, coordinated with team, and oversaw event flow for two successful Annual Gatherings, ensuring 100% event delivery within planned timelines.',
       impact: '100% event delivery success rate'
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: 'College Student Council Member',
-      period: 'Ongoing',
+      period: '2025',
       description: 'Supported peers with resume building, mock interviews, and pre-placement training initiatives; contributed to increasing placement participation by 20% in the department.',
       impact: '20% increase in placement participation'
     }

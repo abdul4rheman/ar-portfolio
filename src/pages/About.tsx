@@ -73,7 +73,7 @@ const About = () => {
               <div className="bg-gray-800 rounded-lg p-6 border-l-4 border-blue-400">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="text-xl font-semibold text-white">HSC (Higher Secondary Certificate)</h3>
-                  <span className="text-blue-400 font-medium">2021</span>
+                  <span className="text-blue-400 font-medium">2019-2021</span>
                 </div>
                 <p className="text-gray-300 mb-2">Maulana Azad College</p>
                 <div className="flex items-center">
