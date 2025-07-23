@@ -6,9 +6,9 @@ const Experience = () => {
   const experience = {
     position: 'Data Analyst Intern',
     company: 'Inditronics',
-    duration: 'June 25, 2024 – December 25, 2024',
+    duration: 'June 25, 2025 – December 25, 2025',
     location: 'Remote/Hybrid',
-    status: 'Completed',
+    status: 'Inprocess',
     description: 'Hands-on work with real datasets, reporting insights, and creating dashboards to support decision-making processes.',
     responsibilities: [
       'Analyzed complex datasets to extract actionable business insights',
