@@ -1,24 +1,18 @@
-# Welcome to your Lovable project
+# Welcome to your Prompt Engineering Project
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/feec64dd-86f6-466c-ac92-09f69c396de1
+This project was created using skills developed through dedicated learning and practical application of Prompt Engineering. The foundation for this project stems from the knowledge gained during the **Prompt Engineering for ChatGPT** certification by Vanderbilt University on Coursera.
 
-## How can I edit this code?
+## How Can I Edit This Code?
 
-There are several ways of editing your application.
+There are several ways to edit your application.
 
-**Use Lovable**
+**Use Your Preferred IDE**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/feec64dd-86f6-466c-ac92-09f69c396de1) and start prompting.
+You can work locally using your favorite IDE. Just clone this repository and push changes — those changes will be reflected wherever the code is deployed.
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Ensure you have **Node.js & npm** installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Follow these steps:
 
@@ -34,21 +28,21 @@ npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
+
 ```
 
 **Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Navigate to the file you want to change.
+- Click the "Edit" button (pencil icon) at the top right.
+- Make your changes and commit them directly.
 
 **Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Go to the main page of your repository.
+- Click the "Code" button and open the "Codespaces" tab.
+- Click "New codespace" to start editing in a cloud environment.
+- Once you're done, commit and push your changes.
 
 ## What technologies are used for this project?
 
@@ -62,12 +56,15 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/feec64dd-86f6-466c-ac92-09f69c396de1) and click on Share -> Publish.
+You can deploy this project to your platform of choice (e.g., Vercel, Netlify, GitHub Pages).
 
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+You can configure a custom domain using your deployment platform's dashboard or DNS settings.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+If you're using Lovable, follow these steps:
+
+- Navigate to Project > Settings > Domains.
+- Click Connect Domain.
