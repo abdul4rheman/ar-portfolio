@@ -31,7 +31,7 @@ const Projects = () => {
       description: 'A complete ridesharing analysis using Python, Pandas, SQL, Power BI, and Excel. Includes interactive dashboards, heatmaps, and temporal patterns that help uncover rider behavior and optimize operations.',
       tools: ['Python', 'Pandas', 'SQL', 'Power BI', 'Excel'],
       category: 'Data Analysis',
-      image: '/api/placeholder/400/250',
+      image: '/src/assets/uber-analysis.jpg',
       status: 'Completed',
       liveUrl: null,
       githubUrl: null

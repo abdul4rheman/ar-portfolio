@@ -69,12 +69,12 @@ const Certifications = () => {
                 className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group"
               >
                 {/* Certificate Header */}
-                <div className="h-32 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center relative overflow-hidden">
+                <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center relative overflow-hidden">
                   {cert.image ? (
                     <img 
                       src={cert.image} 
                       alt={cert.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain p-4"
                     />
                   ) : (
                     <Award className="h-16 w-16 text-cyan-400" />
