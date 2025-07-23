@@ -1,3 +1,12 @@
+> ⚠️ **Usage Restriction Notice**
+>
+> This repository is made public **only for learning and demonstration purposes**.  
+> **❌ Do NOT reuse, redistribute, or clone this project without written permission.**  
+> Violating this notice may result in copyright claims.
+![License: Custom](https://img.shields.io/badge/license-Custom--View--LICENSE-orange)
+
+
+
 # Welcome to your Prompt Engineering Project
 
 ## Project Info
