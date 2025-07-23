@@ -8,43 +8,53 @@ const Projects = () => {
   const projects = [
     {
       title: 'Sales Data Analysis',
-      description: 'Comprehensive analysis of sales data with interactive Power BI dashboard showing trends, patterns, and key performance indicators.',
-      tools: ['Python', 'Power BI', 'Pandas', 'NumPy'],
+      description: 'A comprehensive Sales Data Dashboard created using Microsoft Power BI and Excel, offering interactive charts, KPI cards, regionwise sales breakdown, and monthly trend analytics. Ideal for decisionmakers and managers.',
+      tools: ['Microsoft Power BI', 'Excel', 'Data Analysis'],
       category: 'Data Analysis',
-      image: '/api/placeholder/400/250',
-      status: 'Completed'
+      image: '/src/assets/sales-analysis.png',
+      status: 'Completed',
+      liveUrl: null,
+      githubUrl: null
     },
     {
       title: 'Netflix Data Analysis',
-      description: 'Deep dive into Netflix content data to identify viewing trends, content patterns, and regional preferences using Python.',
-      tools: ['Python', 'Matplotlib', 'Seaborn', 'Pandas'],
+      description: 'Datadriven Netflix Analysis made with Tableau. Features genre trends, release year heatmaps, and countryspecific content visuals to uncover viewing patterns and production trends.',
+      tools: ['Tableau', 'Data Visualization', 'Analytics'],
       category: 'Data Analysis',
-      image: '/api/placeholder/400/250',
-      status: 'Completed'
+      image: '/src/assets/netflix-analysis.jpg',
+      status: 'Completed',
+      liveUrl: null,
+      githubUrl: null
     },
     {
       title: 'Uber Data Analysis',
-      description: 'Exploration of Uber ride patterns, surge pricing analysis, and geographical trend identification for business insights.',
-      tools: ['Python', 'Folium', 'Pandas', 'Plotly'],
+      description: 'A complete ridesharing analysis using Python, Pandas, SQL, Power BI, and Excel. Includes interactive dashboards, heatmaps, and temporal patterns that help uncover rider behavior and optimize operations.',
+      tools: ['Python', 'Pandas', 'SQL', 'Power BI', 'Excel'],
       category: 'Data Analysis',
       image: '/api/placeholder/400/250',
-      status: 'Completed'
+      status: 'Completed',
+      liveUrl: null,
+      githubUrl: null
     },
     {
       title: 'PYQ Bank',
-      description: 'Dynamic student web platform for accessing previous year questions with user authentication and content management system.',
-      tools: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      description: 'A dynamic Previous Year Question Bank for BAMU students, built using HTML, CSS, JavaScript, and Flask. Enables realtime search, mobilefriendly views, and fast question access.',
+      tools: ['HTML', 'CSS', 'JavaScript', 'Flask'],
       category: 'Web Development',
-      image: '/api/placeholder/400/250',
-      status: 'Completed'
+      image: '/src/assets/pyq-bank.jpg',
+      status: 'Completed',
+      liveUrl: 'https://bamupyq.onrender.com',
+      githubUrl: null
     },
     {
-      title: 'Real World School Website',
-      description: 'Fully responsive static website for educational institution with modern design and optimized performance.',
-      tools: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      title: 'School Website',
+      description: 'A responsive school website made with HTML, CSS, JavaScript, and Google Forms. Showcases school activities, event galleries, and admission forms with a clean and userfriendly design.',
+      tools: ['HTML', 'CSS', 'JavaScript', 'Google Forms'],
       category: 'Web Development',
-      image: '/api/placeholder/400/250',
-      status: 'Completed'
+      image: '/src/assets/school-website.jpg',
+      status: 'Completed',
+      liveUrl: 'https://svpps.netlify.app',
+      githubUrl: null
     }
   ];
 
@@ -96,8 +106,16 @@ const Projects = () => {
                 className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group"
               >
                 {/* Project Image */}
-                <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-cyan-400">{project.title.charAt(0)}</div>
+                <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
+                  {project.image.startsWith('/src/assets/') ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="text-4xl font-bold text-cyan-400">{project.title.charAt(0)}</div>
+                  )}
                 </div>
                 
                 {/* Project Content */}
@@ -131,20 +149,44 @@ const Projects = () => {
                   
                   {/* Action Buttons */}
                   <div className="flex gap-2">
-                    <Button 
-                      size="sm" 
-                      className="bg-cyan-500 hover:bg-cyan-600 text-white flex-1"
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View More
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      variant="outline"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                    >
-                      <Github className="h-4 w-4" />
-                    </Button>
+                    {project.liveUrl ? (
+                      <Button 
+                        size="sm" 
+                        onClick={() => window.open(project.liveUrl, '_blank')}
+                        className="bg-cyan-500 hover:bg-cyan-600 text-white flex-1"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Live
+                      </Button>
+                    ) : (
+                      <Button 
+                        size="sm" 
+                        disabled
+                        className="bg-gray-600 text-gray-400 flex-1 cursor-not-allowed"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View More
+                      </Button>
+                    )}
+                    {project.githubUrl ? (
+                      <Button 
+                        size="sm" 
+                        variant="outline"
+                        onClick={() => window.open(project.githubUrl, '_blank')}
+                        className="border-gray-600 text-gray-300 hover:bg-gray-700"
+                      >
+                        <Github className="h-4 w-4" />
+                      </Button>
+                    ) : (
+                      <Button 
+                        size="sm" 
+                        variant="outline"
+                        disabled
+                        className="border-gray-600 text-gray-500 cursor-not-allowed"
+                      >
+                        <Github className="h-4 w-4" />
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>

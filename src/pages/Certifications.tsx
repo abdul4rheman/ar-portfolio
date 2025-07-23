@@ -12,7 +12,8 @@ const Certifications = () => {
       credentialUrl: 'https://coursera.org/share/f18e3da7ffef1becf97f78abe416aa8a',
       description: 'Comprehensive course covering advanced prompt engineering techniques for ChatGPT and other AI language models. Learned to craft effective prompts, understand AI limitations, and optimize AI interactions for various applications.',
       skills: ['Prompt Engineering', 'AI Communication', 'ChatGPT', 'Natural Language Processing'],
-      category: 'AI & Machine Learning'
+      category: 'AI & Machine Learning',
+      image: '/src/assets/cert-prompt-engineering.jpg'
     },
     {
       title: 'Python Complete Course',
@@ -21,7 +22,8 @@ const Certifications = () => {
       credentialUrl: 'https://www.udemy.com/certificate/UC-22aa15e4-fa41-4dd5-b33c-aaf11a0d54b7/',
       description: 'Complete Python programming course covering fundamentals to advanced topics including data structures, object-oriented programming, file handling, and web development basics.',
       skills: ['Python Programming', 'Data Structures', 'OOP', 'Web Development', 'Problem Solving'],
-      category: 'Programming'
+      category: 'Programming',
+      image: '/src/assets/cert-python.jpg'
     },
     {
       title: 'Git And Github Complete Course',
@@ -30,7 +32,8 @@ const Certifications = () => {
       credentialUrl: 'https://www.udemy.com/certificate/UC-22aa15e4-fa41-4dd5-b33c-aaf11a0d54b7/',
       description: 'Comprehensive course on version control using Git and GitHub. Covered branching strategies, collaboration workflows, pull requests, and best practices for code management.',
       skills: ['Git', 'GitHub', 'Version Control', 'Collaboration', 'Code Management'],
-      category: 'Development Tools'
+      category: 'Development Tools',
+      image: '/src/assets/cert-git-github.jpg'
     },
     {
       title: 'Microsoft Excel Beginner to Advanced',
@@ -39,7 +42,8 @@ const Certifications = () => {
       credentialUrl: 'https://www.udemy.com/certificate/UC-b1141948-4af9-40e8-9587-3fa0405d7bd3/',
       description: 'Advanced Excel course covering formulas, pivot tables, data analysis, macros, and dashboard creation. Essential skills for data analysis and business intelligence.',
       skills: ['Excel', 'Data Analysis', 'Pivot Tables', 'Macros', 'Dashboard Creation'],
-      category: 'Data Analysis'
+      category: 'Data Analysis',
+      image: '/src/assets/cert-excel.jpg'
     }
   ];
 
@@ -65,8 +69,16 @@ const Certifications = () => {
                 className="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group"
               >
                 {/* Certificate Header */}
-                <div className="h-32 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center relative">
-                  <Award className="h-16 w-16 text-cyan-400" />
+                <div className="h-32 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center relative overflow-hidden">
+                  {cert.image ? (
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Award className="h-16 w-16 text-cyan-400" />
+                  )}
                   <div className="absolute top-4 right-4">
                     <span className="text-xs font-medium text-cyan-400 bg-cyan-500/20 px-2 py-1 rounded">
                       {cert.category}

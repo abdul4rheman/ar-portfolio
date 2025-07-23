@@ -37,8 +37,12 @@ const About = () => {
             <div className="flex justify-center">
               <div className="relative">
                 <div className="w-64 h-64 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg p-1">
-                  <div className="w-full h-full bg-gray-800 rounded-lg flex items-center justify-center">
-                    <div className="text-4xl font-bold text-cyan-400">SAR</div>
+                  <div className="w-full h-full bg-gray-800 rounded-lg overflow-hidden">
+                    <img 
+                      src="/src/assets/profile-square.png" 
+                      alt="Shaikh Abdul Rheman Mohsin" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg opacity-20 blur-lg"></div>

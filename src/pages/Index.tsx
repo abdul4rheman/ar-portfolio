@@ -98,8 +98,12 @@ const Index = () => {
           <div className="flex-shrink-0">
             <div className="relative">
               <div className="w-80 h-80 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full p-1">
-                <div className="w-full h-full bg-gray-800 rounded-full flex items-center justify-center">
-                  <div className="text-6xl font-bold text-cyan-400">AR</div>
+                <div className="w-full h-full bg-gray-800 rounded-full overflow-hidden">
+                  <img 
+                    src="/src/assets/profile-circular.png" 
+                    alt="Shaikh Abdul Rheman Mohsin" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full opacity-20 blur-xl"></div>
