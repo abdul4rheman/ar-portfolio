@@ -107,15 +107,11 @@ const Projects = () => {
               >
                 {/* Project Image */}
                 <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
-                  {project.image.startsWith('/src/assets/') ? (
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="text-4xl font-bold text-cyan-400">{project.title.charAt(0)}</div>
-                  )}
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Project Content */}
