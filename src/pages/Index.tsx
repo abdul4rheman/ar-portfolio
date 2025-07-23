@@ -100,7 +100,7 @@ const Index = () => {
               <div className="w-80 h-80 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full p-1">
                 <div className="w-full h-full bg-gray-800 rounded-full overflow-hidden">
                   <img 
-                    src="/src/assets/profile-circular.png" 
+                    src="https://i.postimg.cc/9Xb0SqgK/profilephotobygemini.png" 
                     alt="Shaikh Abdul Rheman Mohsin" 
                     className="w-full h-full object-cover"
                   />

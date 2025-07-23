@@ -11,7 +11,7 @@ const Projects = () => {
       description: 'A comprehensive Sales Data Dashboard created using Microsoft Power BI and Excel, offering interactive charts, KPI cards, regionwise sales breakdown, and monthly trend analytics. Ideal for decisionmakers and managers.',
       tools: ['Microsoft Power BI', 'Excel', 'Data Analysis'],
       category: 'Data Analysis',
-      image: '/src/assets/sales-analysis.png',
+      image: 'https://i.postimg.cc/3RjtrXbQ/salesdataanalysis.png',
       status: 'Completed',
       liveUrl: null,
       githubUrl: null
@@ -21,7 +21,7 @@ const Projects = () => {
       description: 'Datadriven Netflix Analysis made with Tableau. Features genre trends, release year heatmaps, and countryspecific content visuals to uncover viewing patterns and production trends.',
       tools: ['Tableau', 'Data Visualization', 'Analytics'],
       category: 'Data Analysis',
-      image: '/src/assets/netflix-analysis.jpg',
+      image: 'https://i.postimg.cc/YSFkpSKB/Netflixdataanalysis.jpg',
       status: 'Completed',
       liveUrl: null,
       githubUrl: null
@@ -31,7 +31,7 @@ const Projects = () => {
       description: 'A complete ridesharing analysis using Python, Pandas, SQL, Power BI, and Excel. Includes interactive dashboards, heatmaps, and temporal patterns that help uncover rider behavior and optimize operations.',
       tools: ['Python', 'Pandas', 'SQL', 'Power BI', 'Excel'],
       category: 'Data Analysis',
-      image: '/src/assets/uber-analysis.jpg',
+      image: 'https://i.postimg.cc/h42FRmz7/UberDataanalysis.jpg',
       status: 'Completed',
       liveUrl: null,
       githubUrl: null
@@ -41,7 +41,7 @@ const Projects = () => {
       description: 'A dynamic Previous Year Question Bank for BAMU students, built using HTML, CSS, JavaScript, and Flask. Enables realtime search, mobilefriendly views, and fast question access.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Flask'],
       category: 'Web Development',
-      image: '/src/assets/pyq-bank.jpg',
+      image: 'https://i.postimg.cc/x1HF8NC5/Bamupyqpng.jpg',
       status: 'Completed',
       liveUrl: 'https://bamupyq.onrender.com',
       githubUrl: null
@@ -51,7 +51,7 @@ const Projects = () => {
       description: 'A responsive school website made with HTML, CSS, JavaScript, and Google Forms. Showcases school activities, event galleries, and admission forms with a clean and userfriendly design.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Google Forms'],
       category: 'Web Development',
-      image: '/src/assets/school-website.jpg',
+      image: 'https://i.postimg.cc/sgkxPq3y/SVPPS.png',
       status: 'Completed',
       liveUrl: 'https://svpps.netlify.app',
       githubUrl: null

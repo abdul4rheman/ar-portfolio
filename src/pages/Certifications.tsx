@@ -13,7 +13,7 @@ const Certifications = () => {
       description: 'Comprehensive course covering advanced prompt engineering techniques for ChatGPT and other AI language models. Learned to craft effective prompts, understand AI limitations, and optimize AI interactions for various applications.',
       skills: ['Prompt Engineering', 'AI Communication', 'ChatGPT', 'Natural Language Processing'],
       category: 'AI & Machine Learning',
-      image: '/src/assets/cert-prompt-engineering.jpg'
+      image: 'https://i.postimg.cc/2j0Kqfxq/promptengineering.jpg'
     },
     {
       title: 'Python Complete Course',
@@ -23,7 +23,7 @@ const Certifications = () => {
       description: 'Complete Python programming course covering fundamentals to advanced topics including data structures, object-oriented programming, file handling, and web development basics.',
       skills: ['Python Programming', 'Data Structures', 'OOP', 'Web Development', 'Problem Solving'],
       category: 'Programming',
-      image: '/src/assets/cert-python.jpg'
+      image: 'https://i.postimg.cc/kgTQsnB8/Pythoncertificate.jpg'
     },
     {
       title: 'Git And Github Complete Course',
@@ -33,7 +33,7 @@ const Certifications = () => {
       description: 'Comprehensive course on version control using Git and GitHub. Covered branching strategies, collaboration workflows, pull requests, and best practices for code management.',
       skills: ['Git', 'GitHub', 'Version Control', 'Collaboration', 'Code Management'],
       category: 'Development Tools',
-      image: '/src/assets/cert-git-github.jpg'
+      image: 'https://i.postimg.cc/13FSczW7/gitgithub.jpg'
     },
     {
       title: 'Microsoft Excel Beginner to Advanced',
@@ -43,7 +43,7 @@ const Certifications = () => {
       description: 'Advanced Excel course covering formulas, pivot tables, data analysis, macros, and dashboard creation. Essential skills for data analysis and business intelligence.',
       skills: ['Excel', 'Data Analysis', 'Pivot Tables', 'Macros', 'Dashboard Creation'],
       category: 'Data Analysis',
-      image: '/src/assets/cert-excel.jpg'
+      image: 'https://i.postimg.cc/vTCjcrdY/microsoft.jpg'
     }
   ];
 

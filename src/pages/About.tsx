@@ -39,7 +39,7 @@ const About = () => {
                 <div className="w-64 h-64 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg p-1">
                   <div className="w-full h-full bg-gray-800 rounded-lg overflow-hidden">
                     <img 
-                      src="/src/assets/profile-square.png" 
+                      src="https://i.postimg.cc/8zbQthzn/profilephotobygemini3.png" 
                       alt="Shaikh Abdul Rheman Mohsin" 
                       className="w-full h-full object-cover"
                     />
