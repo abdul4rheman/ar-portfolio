@@ -6,73 +6,40 @@
 
 
 
-# Welcome to your Prompt Engineering Project
+# Welcome to the Prompt Engineering Showcase Project
 
-## Project Info
+## 📘 Project Info
 
-This project was created using skills developed through dedicated learning and practical application of Prompt Engineering. The foundation for this project stems from the knowledge gained during the **Prompt Engineering for ChatGPT** certification by Vanderbilt University on Coursera.
+This project was built to demonstrate the practical skills gained through the **Prompt Engineering for ChatGPT** certification by **Vanderbilt University (Coursera)**. It serves as a real-world application of designing AI-enhanced frontend interfaces using:
 
-## How Can I Edit This Code?
+- AI Prompt Engineering techniques
+- Frontend frameworks and UI libraries
+- Best practices in modular UI development
 
-There are several ways to edit your application.
+> The source code is part of a private learning portfolio.  
+> For viewing only – not intended for cloning or reuse.
 
-**Use Your Preferred IDE**
+---
 
-You can work locally using your favorite IDE. Just clone this repository and push changes — those changes will be reflected wherever the code is deployed.
+## 🛠️ How Can I Explore This Code?
 
-Ensure you have **Node.js & npm** installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+You are free to:
+- View the code structure and logic
+- Learn from its design patterns and usage of tools
+- Ask for a walkthrough or mentorship about how it was built
 
-Follow these steps:
+> 🧠 **You are NOT permitted** to modify, reuse, or publish this code elsewhere.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 💻 Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+This project was built using:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+- ⚡ Vite (blazing fast dev server)
+- 🧠 TypeScript (type-safe JavaScript)
+- ⚛️ React
+- 🎨 Tailwind CSS
+- 🧩 shadcn-ui (highly customizable UI components)
 
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the file you want to change.
-- Click the "Edit" button (pencil icon) at the top right.
-- Make your changes and commit them directly.
-
-**Use GitHub Codespaces**
-
-- Go to the main page of your repository.
-- Click the "Code" button and open the "Codespaces" tab.
-- Click "New codespace" to start editing in a cloud environment.
-- Once you're done, commit and push your changes.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-You can deploy this project to your platform of choice (e.g., Vercel, Netlify, GitHub Pages).
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-You can configure a custom domain using your deployment platform's dashboard or DNS settings.
-
-If you're using Lovable, follow these steps:
-
-- Navigate to Project > Settings > Domains.
-- Click Connect Domain.
+---
