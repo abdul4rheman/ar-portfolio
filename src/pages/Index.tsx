@@ -8,7 +8,7 @@ import Navigation from '@/components/Navigation';
 const Index = () => {
   const handleDownloadResume = () => {
     // Convert Google Drive view link to direct download link
-    const driveUrl = 'https://drive.google.com/file/d/1xAgkcU4-_sbZh1wpZLMw-bjOv4-dEnCI/view?usp=sharing';
+    const driveUrl = 'https://drive.google.com/file/d/11A2FCUcNkbofIEn0GENUFcAbvxe_Azmn/view?usp=sharing';
     const fileId = driveUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
     if (fileId) {
       const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
